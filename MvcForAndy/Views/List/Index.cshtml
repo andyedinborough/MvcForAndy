@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MvcForAndy.Models.Registration>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Email Addresses in DB</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Email</li>
+    }
+</ul>

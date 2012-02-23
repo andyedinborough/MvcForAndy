@@ -1,0 +1,19 @@
+﻿@model MvcForAndy.Models.Registration
+
+@{
+    AjaxOptions options = new AjaxOptions
+    {
+        HttpMethod = "Post",
+        UpdateTargetId = "form-content"
+    };
+}
+
+<p>Tracky is a social collaboration platform.​ When you get your life on Tracky,​ you can finally sit back and take complete control of your work,​ social and personal interweb –​ all from one streamlined interface.</p>
+
+@using (Ajax.BeginForm(options))
+{
+    @Html.LabelFor(model => model.Email)
+    @Html.TextBoxFor(model => model.Email)
+    <input type="submit" value="Go" />
+    @Html.ValidationMessageFor(model => model.Email)
+}

@@ -1,0 +1,11 @@
+﻿@model MvcForAndy.Models.Registration
+
+@{
+    ViewBag.Title = "For Andy and Evan At Tracky";
+}
+
+
+<h4>@Html.Raw(ViewBag.Message)</h4>
+<div id="form-content">
+    @{Html.RenderPartial("FormContent");}
+</div>
